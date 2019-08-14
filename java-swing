@@ -1,0 +1,63 @@
+package br.edu.univas.lab4.view;
+
+import java.awt.FlowLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+public class Exercicio1 extends JFrame {
+
+	public Exercicio1() {
+		setSize(635, 620);
+		setTitle("Aprendendo Swing");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setLayout(new FlowLayout());
+		setLabelFields();
+	}
+
+	public void setLabelFields() {
+		JLabel nameLabel = new JLabel();
+		nameLabel.setText("Nome:");
+		getContentPane().add(nameLabel);
+		getContentPane().add(input(22));
+		
+		JLabel emailLabel = new JLabel();
+		emailLabel.setText("E-mail:");
+		getContentPane().add(emailLabel);
+		getContentPane().add(input(22));
+		
+		JLabel adddressLabel = new JLabel();
+		adddressLabel.setText("Endereço:");
+		getContentPane().add(adddressLabel);
+		getContentPane().add(input(39));
+		
+		JLabel adddressNumberLabel = new JLabel();
+		adddressNumberLabel.setText("N°:");
+		getContentPane().add(adddressNumberLabel);
+		getContentPane().add(input(5));
+		
+		JLabel neighborhoodLabel = new JLabel();
+		neighborhoodLabel.setText("Bairro:");
+		getContentPane().add(neighborhoodLabel);
+		getContentPane().add(input(48));
+		
+		
+		JLabel sexLabel = new JLabel();
+		sexLabel.setText("Sexo:");
+	}
+
+	public JTextField input(int size) {
+		JTextField field = new JTextField();
+		field.setColumns(size);
+		return field;
+	}
+	
+	public JLabel label(String str){
+		JLabel label = new JLabel();
+		return label.setText(str);
+	}
+
+}
